@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="edge-cuts.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title7">edge_cuts</title>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.4778115"
+     inkscape:cx="383.33712"
+     inkscape:cy="274.39223"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Edge"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       id="rect1"
+       style="fill:none;stroke:#1a1a1a;stroke-width:0.25322;stroke-dasharray:none"
+       d="m 27.584363,0.12660726 c -8.331332,0 -15.756269,3.67771754 -20.7837445,9.48210854 l 0.035657,1.2154302 2.8897461,3.015836 a 22.498011,22.498011 0 0 1 0.031006,-0.05323 l 2.2220864,2.222087 a 21.004425,19.513814 45 0 0 3.111955,26.164294 21.004425,19.513814 45 0 0 0.001,10e-4 l -0.02636,0.02687 7.153569,7.154085 -1.014409,1.014408 15.39751,15.396993 1.014408,-1.014408 7.154086,7.154085 0.02687,-0.02635 a 21.004425,19.513814 45 0 0 5.17e-4,5.17e-4 21.004425,19.513814 45 0 0 28.650965,1.053682 21.004425,19.513814 45 0 0 -1.0542,-28.650447 21.004425,19.513814 45 0 0 -0.417545,-0.365352 l -6.763412,-6.763412 1.016476,-1.016475 -0.0098,-0.0098 1.11001,-1.11001 8.129219,8.12922 -0.031,0.03152 a 22.498011,22.498011 0 0 1 0.001,10e-4 22.498011,22.498011 0 0 1 6.185669,11.692826 h 5.558317 a 19.513814,21.004425 45 0 0 4.793506,18.100188 19.513814,21.004425 45 0 0 28.650965,-1.054716 19.513814,21.004425 45 0 0 0.36535,-0.417029 L 137.62256,54.86275 c 15.11421,-0.111614 27.25053,-12.267636 27.25053,-27.362671 0,-15.164798 -12.24618,-27.37352274 -27.45776,-27.37352274 z m 1.732194,4.73562824 a 22.498011,22.498011 0 0 1 14.293701,6.4983115 22.498011,22.498011 0 0 1 10e-4,5.17e-4 l 0.03101,-0.03101 8.310604,8.31112 -1.109493,1.109493 -0.0098,-0.0098 -1.016476,1.016475 L 43.052669,14.9934 A 21.004425,19.513814 45 0 0 42.687834,14.576371 21.004425,19.513814 45 0 0 16.468245,11.509892 L 14.253394,9.2950399 A 22.498011,22.498011 0 0 1 29.316557,4.8622355 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Guides"
+     style="display:inline">
+    <path
+       sodipodi:type="star"
+       style="fill:none;stroke:#1a1a1a;stroke-width:0.254;stroke-dasharray:none"
+       id="path5"
+       inkscape:flatsided="false"
+       sodipodi:sides="4"
+       sodipodi:cx="47.221226"
+       sodipodi:cy="26.838875"
+       sodipodi:r1="2.0255754"
+       sodipodi:r2="0.28358057"
+       sodipodi:arg1="0"
+       sodipodi:arg2="0.78539816"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 49.246801,26.838875 -1.825054,0.200522 -0.200521,1.825053 -0.200522,-1.825053 -1.825054,-0.200522 1.825054,-0.200522 0.200522,-1.825054 0.200521,1.825054 z"
+       transform="rotate(45,25.698131,30.835193)"
+       inkscape:transform-center-x="-15.128813"
+       inkscape:transform-center-y="17.993409"
+       inkscape:label="centroid" />
+    <circle
+       style="fill:none;stroke:#1a1a1a;stroke-width:0.254;stroke-dasharray:none"
+       id="path6"
+       cx="84.745499"
+       cy="0.063849106"
+       r="12.5"
+       inkscape:transform-center-x="-34.312707"
+       inkscape:transform-center-y="37.177303"
+       transform="rotate(45)"
+       inkscape:label="joystick_keepout" />
+    <path
+       id="rect6"
+       style="fill:none;stroke:#1a1a1a;stroke-width:0.254;stroke-dasharray:none"
+       d="m 40.718416,23.178201 -8.999968,-1e-6 V 14.178232 H 23.71842 V 23.1782 l -8.999968,1e-6 v 8.000028 l 8.999968,-1e-6 v 8.999969 h 8.000028 v -8.999969 l 8.999968,1e-6 z"
+       inkscape:transform-center-x="2.0255759"
+       inkscape:transform-center-y="-3.2096556"
+       inkscape:label="d-pad" />
+    <path
+       style="fill:none;stroke:#1a1a1a;stroke-width:0.254;stroke-dasharray:none"
+       d="M 71.98621,14.985367 15.499952,71.471625 Z"
+       id="path7"
+       inkscape:label="symmetric_axis" />
+  </g>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>edge_cuts</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
