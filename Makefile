@@ -35,5 +35,5 @@ install-dev: ## Use Brew to install OpenSCAD, NopSCADLib, and its Python depende
 	cd ~/Documents/OpenSCAD/libraries
 	git clone https://github.com/nophead/NopSCADlib.git
 
-board: ## Create a SCAD definition for the board.
-	toolmaster-of-brainerd fsckpad-hardware.kicad_pcb -o scad/fsckpad_board.scad
+enclosure: ## Create a SCAD definition for the board.
+	tob fsckpad-hardware/fsckpad-hardware.kicad_pcb -o scad/fsckpad_board.scad

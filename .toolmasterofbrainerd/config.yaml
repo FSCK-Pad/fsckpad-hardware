@@ -1,0 +1,7 @@
+# Project config for Toolmaster of Brainerd, written by device-cookiecutter
+
+project:
+  name: FSCK Pad
+  slug: fsckpad
+  pkg: fsckpad
+  description: FSCKPad open hardware game controller
