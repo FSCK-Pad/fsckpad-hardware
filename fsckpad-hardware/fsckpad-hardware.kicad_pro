@@ -58,7 +58,32 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|123349000|14216000|1ff0cc8e-6b0c-449e-b05f-0d75da1755e1|53615074-c19c-439e-a82f-8934035ae1c1",
+        "clearance|123849000|14716000|b9866a3c-cd27-43fd-bf5f-1801cb37ee00|53615074-c19c-439e-a82f-8934035ae1c1",
+        "clearance|124349000|14216000|fa4db1af-ddc1-4632-910b-78af7353c277|b9866a3c-cd27-43fd-bf5f-1801cb37ee00",
+        "clearance|124849000|14716000|ce702cbd-92cf-4691-9889-063f1f790ed5|b9866a3c-cd27-43fd-bf5f-1801cb37ee00",
+        "clearance|125349000|14216000|4b9441ef-6e37-49f1-b4b1-eac05ca50555|ce702cbd-92cf-4691-9889-063f1f790ed5",
+        "clearance|125849000|14716000|f0000b83-0ef8-4ae1-9334-badb38b88698|ce702cbd-92cf-4691-9889-063f1f790ed5",
+        "clearance|126349000|14216000|0f57f325-465a-4059-8326-b8c132b4256e|f0000b83-0ef8-4ae1-9334-badb38b88698",
+        "clearance|126849000|14716000|f58e7e16-d533-4ced-bb6d-b3e6cdca9576|f0000b83-0ef8-4ae1-9334-badb38b88698",
+        "clearance|127349000|14216000|37f66c44-2822-4b20-807b-9ece5dddfe84|f58e7e16-d533-4ced-bb6d-b3e6cdca9576",
+        "clearance|127849000|14716000|2448144d-234a-4b72-84b9-5a0683900cb3|f58e7e16-d533-4ced-bb6d-b3e6cdca9576",
+        "clearance|128349000|14141000|827f23e1-1cfd-4822-ab4d-2ed2286a707d|2448144d-234a-4b72-84b9-5a0683900cb3",
+        "clearance|77933340|49557447|ccf652bf-2352-4733-8d1d-e7fbb601da61|29ceeb68-a753-4e06-9158-820896c50447",
+        "clearance|78693479|49610480|b85d0076-5e2c-43f6-b58f-db8703a02f29|ccf652bf-2352-4733-8d1d-e7fbb601da61",
+        "clearance|78693480|50211521|b85d0076-5e2c-43f6-b58f-db8703a02f29|1f553e41-bc43-4c93-9166-2ca8e8ddcccb",
+        "clearance|88952000|64905000|2e4e4e96-65a7-409e-854c-29e3233fd45f|b52b4f01-07eb-470a-abb5-5ac305822cae",
+        "clearance|89027000|65905000|4acda3b0-f55b-4f4c-8b0f-4dfa0ec7992c|b2cbde2d-c835-4ed9-8e1d-e1ac9e593623",
+        "clearance|98250000|16575000|13bb90f6-b400-4f69-934e-aca416efc515|598a845d-124b-4995-89c7-f56262de48f5",
+        "clearance|98675000|17000000|13bb90f6-b400-4f69-934e-aca416efc515|80868982-c5ea-48ff-96b8-46bd6df375f4",
+        "clearance|99250000|16500000|80868982-c5ea-48ff-96b8-46bd6df375f4|3f6b9fbe-940e-4333-af20-97a2ec45f71e",
+        "courtyards_overlap|86741685|56354137|0d7c3557-29b5-4158-be1d-2b38eaa89d35|4dee2d73-a183-4b37-a16c-f164e0d81418",
+        "courtyards_overlap|89251685|56354137|1b517d8e-cb3b-41ec-9f78-9ab4ae536b8e|4dee2d73-a183-4b37-a16c-f164e0d81418",
+        "courtyards_overlap|91943001|56162001|916fe659-d59f-4b69-b76b-965ee3deb3f1|4dee2d73-a183-4b37-a16c-f164e0d81418",
+        "invalid_outline|50497164|84021134|3a597635-8fa5-4429-9973-2016530801a5|00000000-0000-0000-0000-000000000000",
+        "shorting_items|64619287|42335181|21572494-8927-4697-bd05-1e2285f72da8|2549a187-53dc-4b44-b6b3-cca4f2145671"
+      ],
       "meta": {
         "version": 2
       },
@@ -486,7 +511,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "fsckpad-hardware.net",
-      "plot": "",
+      "plot": "../../OSHPark/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
