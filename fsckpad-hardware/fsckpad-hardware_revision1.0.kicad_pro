@@ -78,7 +78,6 @@
         "clearance|99250000|16500000|80868982-c5ea-48ff-96b8-46bd6df375f4|3f6b9fbe-940e-4333-af20-97a2ec45f71e",
         "invalid_outline|50497164|84021134|3a597635-8fa5-4429-9973-2016530801a5|00000000-0000-0000-0000-000000000000",
         "shorting_items|64619287|42335181|21572494-8927-4697-bd05-1e2285f72da8|2549a187-53dc-4b44-b6b3-cca4f2145671",
-        "shorting_items|65225762|41831499|8154e8c9-216f-41ba-af3d-9dc2474a5895|2549a187-53dc-4b44-b6b3-cca4f2145671",
         "shorting_items|66036261|41017261|7a0d9228-0101-497a-ad87-092cd500acd9|cc924a1e-51cd-4c7e-a33f-2edb8a836414",
         "shorting_items|66603911|40354096|b230156a-c6b7-4d09-95db-08923cc8e871|cc924a1e-51cd-4c7e-a33f-2edb8a836414",
         "shorting_items|74422000|14400000|530615af-8651-4336-be55-0b5e9be5c6ab|4b0a8c70-0cba-4fef-8833-c9a4ced07a1a"
@@ -470,7 +469,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "fsckpad-hardware.kicad_pro",
+    "filename": "fsckpad-hardware_revision1.0.kicad_pro",
     "version": 1
   },
   "net_settings": {

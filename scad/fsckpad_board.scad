@@ -177,7 +177,7 @@ module base_pcb(){
 module base_pcb_margin(){
     minkowski(){
         linear_extrude(height=THICKNESS, convexity=20, center=true) polygon(BOARD_POLY);
-        cube([0.4, 0.4, 0.4], center=true);
+        cube([0.5, 0.5, 0.5], center=true);
     }
 }
 
@@ -412,6 +412,6 @@ module position_IC6(){
     translate([-112.522,31.75, 0]) rotate([180,0,90]) children();
 }
 if($preview)
-    base_pcb();
-    %base_pcb_clearance();
+    //base_pcb();
+    //%base_pcb_clearance();
     %base_pcb_margin();
