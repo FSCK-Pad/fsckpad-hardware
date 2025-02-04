@@ -102,13 +102,19 @@ ADAFRUIT_TFT_2p8_TOUCH = let(size = [81.3, 62.5], hole=2.5, screen=[69.6, 45.2])
     []
 ];
 
+SCREEN = ADAFRUIT_TFT_1p9;
+
+
 
 module shape(){
+    //mirrors the board perimiter to symmetrize the shape
     union(){
         polygon(BOARD_POLY);
         translate([-WIDTH,0,0]) mirror([1,0,0]) polygon(BOARD_POLY);
     }
 }
+
+//!shape();
 
 module correct_position_feather(headers=1){
     position_Feather() translate([-10,20,3.5 + headers*8.5]) rotate([0,0,90]) children();
@@ -128,6 +134,8 @@ assembly("Board and Daughterboard"){
     }
 }
 
+//!board_and_feather_assembly();
+
 module feather_clearance(){
     intersection(){
         hull(){
@@ -141,7 +149,7 @@ module feather_clearance(){
 
 //!feather_clearance();
 
-module stick_clearance(dia=25, z_offset=6, angle=30){
+module stick_clearance(dia=25, z_offset=6, angle=27){
     union(){
         cylinder(d=dia, h=z_offset*2);
         translate([0,0,z_offset]) cylinder(h=z_offset*2, r1=5, r2=(dia)*sin(angle));
@@ -186,48 +194,80 @@ module position_screen(){
     translate([0,18,0]) position_EYESPI1() children();
 }
 
-module volume(grips=0){
-    lower=40;
-    upper=10.4;
-    difference(){
-        minkowski(){
+lower=40;
+upper=10.4;
+
+module grip(d=35, n=17){
+    scale([1.2, 3, 1.5]) sphere(d=d, $fn=n);
+}
+
+//!grip();
+
+module positive_volume(grips=1){
+    minkowski(){
             union(){
                 translate([0,0,0]) linear_extrude(upper+THICKNESS, convexity = 20) shape();
                 feather_clearance();
+                if (grips) {
+                    for (i = [-1, 1]){
+                        translate([i*75,30,-20]) position_Centroid1() rotate([20,0,i*15]) grip();
+                    }
+                }
             }
-            sphere(r=1.4, $fn=8);
+            sphere(r=1.4, $fn=4);
         }
-        //upper void
-        translate([0,0,-0.02]) base_pcb_clearance(upper=upper, lower=0);
-        //lower void
-        translate([0,0,0]) intersection() {
-            base_pcb_clearance(upper=upper, lower=lower);
-            feather_clearance();
-        }
-        //board rim
-        translate([0,0,-THICKNESS/2-.2]) linear_extrude(THICKNESS+.2, convexity = 20) shape();
-        position_LS1() stick_clearance();
-        position_RS1() stick_clearance();
-        correct_position_feather() pcb_component_position(Feather405, "usb_C") rotate([0,0,180]) usb_C(cutout=true);
+}
+
+//!positive_volume();
+
+module negative_volume(){
+    //void above PCB
+    translate([0,0,-0.02]) base_pcb_clearance(upper=upper, lower=0);
+    //void below PCB
+    translate([0,0,0]) intersection() {
+        base_pcb_clearance(upper=upper, lower=lower);
+        feather_clearance();
+    }
+    //main board
+    translate([0,0,-THICKNESS/2-.2]) linear_extrude(THICKNESS+.2, convexity = 20) shape();
+    //apertures for thumbsticks
+    position_LS1() stick_clearance();
+    position_RS1() stick_clearance();
+    //USB cable cutout
+    correct_position_feather() pcb_component_position(Feather405, "usb_C") rotate([0,0,180]) usb_C(cutout=true);
+    //Space for Feather board
         correct_position_feather() cube([
             pcb_size(Feather405)[0]+.8,
             pcb_size(Feather405)[1]+.8,
             pcb_size(Feather405)[2]+.8,
         ], center=true);
-        //heatset inserts
-        position_pcb_mounts() insert_hole(F1BM2p5, upper-5-1.4);
-        position_Y1() button(z=upper+1.4, oblong=0, r=5.2);
-        position_X1() button(z=upper+1.4, oblong=0, r=5.2);
-        position_A1() button(z=upper+1.4, oblong=0, r=5.2);
-        position_B1() button(z=upper+1.4, oblong=0, r=5.2);
-        position_Start1() button(z=upper+1.4, oblong=4, r=2.7);
-        position_Select1() button(z=upper+1.4, oblong=4, r=2.5);
-        position_POW1() rotate([0,0,0]) button(z=upper+1.4, oblong=4, r=2.5);
-        translate([0,0,upper+THICKNESS-5]) position_screen() pcb(ADAFRUIT_TFT_1p54);
+    //heatset inserts
+    position_pcb_mounts() insert_hole(F1BM2p5, upper-5-1.4);
+    
+    //buttons
+    position_Y1() button(z=upper+1.4, oblong=0, r=5.2);
+    position_X1() button(z=upper+1.4, oblong=0, r=5.2);
+    position_A1() button(z=upper+1.4, oblong=0, r=5.2);
+    position_B1() button(z=upper+1.4, oblong=0, r=5.2);
+    position_Start1() button(z=upper+1.4, oblong=4, r=2.7);
+    position_Select1() button(z=upper+1.4, oblong=4, r=2.5);
+    position_POW1() rotate([0,0,0]) button(z=upper+1.4, oblong=4, r=2.5);
+    translate([0,0,upper+THICKNESS-5]) position_screen() pcb(SCREEN);
+    
+}
+
+//!insert_hole(F1BM2p5, 10);
+//!negative_volume();
+
+module volume(grips=1){
+    difference(){
+        positive_volume(grips);
+        //negative_volume();
     }
 }
 
-//!volume();
+//!sphere(r=10, $fn=4);
+!volume();
 
 //! Printing notes and finishing instructions for the upper clamshell.
 module fsckpad_enclosure_upper_stl()
@@ -235,7 +275,7 @@ stl("fsckpad enclosure"){
     //Upper clamshell.
     intersection(){
         volume();
-        translate([-200, -200, THICKNESS/2]) cube([400, 400, 400]);
+        translate([-200, -200, -THICKNESS/2]) cube([400, 400, 400]);
     }
 }
 
@@ -245,7 +285,7 @@ stl("fsckpad enclosure"){
     //Lower clamshell.
     intersection(){
         volume();
-        translate([-200, -200, -400+THICKNESS/2]) cube([400, 400, 400]);
+        translate([-200, -200, -400-THICKNESS/2]) cube([400, 400, 400]);
     }
 }
 

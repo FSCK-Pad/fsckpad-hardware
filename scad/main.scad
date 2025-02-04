@@ -2,7 +2,7 @@
 $pp1_colour = "grey";           // Override any global defaults here if required, see NopSCADlib/global_defs.scad.
 include <NopSCADlib/lib.scad>   // Includes all the vitamins and utilities in NopSCADlib but not the printed parts.
 include <fsckpad_enclosure.scad>
-include <fsckpad_boad.scad>
+include <fsckpad_board.scad>
 
 
 //! Assembly instructions in Markdown format in front of each module that makes an assembly.
